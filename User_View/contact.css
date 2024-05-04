@@ -1,0 +1,385 @@
+* {
+    margin: 0 ;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --button-color: #f5168d;
+}
+
+.header {
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(http://localhost/Driving_School/images/cars.jpg);
+    background-position: center;
+    padding: 10px 8%;
+    overflow-y: hidden;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.logo a {
+    font-size: 40px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+nav .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .buttons a {
+    color: #fff;
+    padding: 13px 20px;
+    font-weight: 500;
+    cursor: pointer;
+    background: #f5168d;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav ul li::after {
+      content: '';
+      width: 0%;
+      height: 4px;
+      background: #06dcb8;
+      display: block;
+      margin: 2px;
+      transition: 0.5s;
+}
+
+nav ul li:hover::after {
+    width: 100%;
+}
+
+.header h1 {
+    font-size: 65px;
+    text-align: center;
+    margin-top: 200px;
+    color: #fff;
+    font-weight: bolder;
+}
+
+.dropdown-1 {
+    display: none;
+}
+
+#services:hover .dropdown-1 {
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -100px;
+    width: 400px;
+}
+
+.contact-Us {
+    position: relative;
+    padding: 40px 100px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.box {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5fr 4fr;
+    grid-template-areas:
+     "form info"
+     "form map";
+     grid-gap: 20px;
+}
+
+.form {
+    grid-area: form;
+}
+
+.info {
+    grid-area: info;
+}
+
+.map {
+    grid-area: map;
+}
+
+.contact {
+    padding: 40px;
+    background-color: #c7c7c7;
+
+}
+
+.contact h3 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.form {
+    position: relative;
+    width: 100%;
+}
+
+.form .row {
+    display: flex;
+    gap: 20px;
+    
+}
+
+.input-box {
+    flex-direction: column;
+    display: flex;
+    width: 50%;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.input-box ::placeholder {
+    color: #999;
+}
+
+.row-2 .input-box {
+    width: 100%;
+}
+
+.input-box span {
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.input-box input {
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid #333;
+}
+
+.input-box textarea {
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid #333;
+    resize: none;
+    margin-bottom: 10px;
+    height: 150px;
+}
+
+.input-box input[type="submit"] {
+    font-weight: bold;
+    color: #fff;
+    background-color: #f5168d;
+    cursor: pointer;
+    border: none;
+    padding: 15px 15px;
+    width: 150px;
+    font-size: 25px;
+}
+
+.info {
+    background-color: #0e3959;
+}
+
+.info h3 {
+    color: #fff;
+}
+
+.info .info-box div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+}
+
+.info .info-box div span {
+    color: #000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.info .info-box div p {
+    color: #fff;
+    font-size: 20px;
+}
+
+.info .info-box div a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.social {
+    margin-top: 40px;
+    display: flex;
+}
+
+.social li {
+    margin-right: 40px;
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    display: flex;
+    background-color: #fff;
+}
+
+.social li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+    
+}
+
+.map {
+    padding: 0;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    background-color: #24262b;
+    padding: 70px 0;
+    box-sizing: border-box;
+}
+
+footer .container-2 {
+   width: 1470px;
+   margin: auto
+}
+
+footer ul {
+    list-style: none;
+}
+
+.container-2 .row {
+    display: flex !important;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 25px;
+}
+
+.footer-col p {
+    color: #fff;
+    font-size: 20px;
+}
+
+.footer-col h4 {
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    color: #ffffff;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    width: 50px;
+    box-sizing: border-box;
+}
+
+.footer-col ul li{
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 19px;
+    text-transform: capitalize;
+    
+}
+
+.footer-col ul li a:hover {
+    padding-left: 10px;
+    color: #f5168d;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 10px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 25px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+#services .dropdown-1 {
+    display: none;
+}
+
+#services:hover .dropdown-1 {
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -100px;
+    width: 400px;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="apply.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    
+    <div class="header">
+
+        <nav>
+            <div class="logo"><a href="#">Logo</a></div>
+            <ul>
+                <li><a href="http://localhost/Driving_School/User_View/Index.html"> Home </a></li>
+                <li><a href="http://localhost/Driving_School/User_View/about us.html"> About Us </a></li>
+                <li><a href="http://localhost/Driving_School/User_View/contact.html"> Contact </a></li>
+                <li id="services"><a href="#"> Services </a>
+                  <ul class="dropdown-1">
+                   <li> <a href="http://localhost/Driving_School/User_View/services/learning_material.html"> Various Materials</a> </li> <br>
+                   <li id="Driving">
+                     <li><a href="#" id="1"> Driving Training </a></li> 
+                     <ul class="dropdown-2">
+                        <li> <a href="http://localhost/Driving_School/User_View/services/Common vehicles.html"> Common Vehicles</a> </li> <br>
+                        <li> <a href="http://localhost/Driving_School/User_View/services/Heavy Vehicles.html"> Heavy Vrhicles</a> </li> <br>
+                     </ul>
+                  </li>  
+                  </ul>
+           </li>
+                <li><a href="http://localhost/Driving_Schoolresourses.html"> Resources </a></li>
+            </ul>
+            <div class="buttons">
+               <!--<input type="button" value="requests" onclick="location.assign('requests.php')">-->
+               <a href="http://localhost/Driving_School/Employee_view/requests.php"> requests </a>
+               <a href="http://localhost/Driving_School/User_View/Login.html"> Login </a>
+           </div>
+        </nav>
+
+        <h1> Join Wth Us Today to get a different experience of <br> driving </h1>
+    
+    </div>
+
+<section> 
+    <div class="registration">
+
+            <h1> Online Registration </h1>
+
+        <form action="">
+          <div class="inputs"> 
+            <div class="input">
+               <label> First Name : </label>
+               <input type="text" placeholder=" Your Name" required>
+            </div>
+            <div class="input">
+               <label> Last Name : </label>
+               <input type="text" placeholder=" Your Name" required>
+            </div> 
+            <div class="input">
+                <label> Telephone no </label>
+                <input type="number" placeholder=" telephone no" required maxlength="10">
+             </div> 
+             <div class="input">
+                <label> Date of Birth </label>
+                <input type="date" placeholder=" your birthday" required>
+             </div>
+             <div class="input">
+                <label> Mobile Number </label>
+                <input type="tel" placeholder=" mobile number" required maxlength="10">
+             </div> 
+             <div class="input">
+                <label> NIC Number </label>
+                <input type="text" placeholder=" NIC number" required>
+             </div> 
+             <div class="input">
+                <label> Email Address </label>
+                <input type="email" placeholder=" email id" required>
+             </div> 
+             
+             <div class="input">
+                <label> Gender </label>
+                <select type="text" placeholder="Your Gender" required>
+                  <option value="">Select Your Gender </option>
+                  <option value=""> Male </option>
+                  <option value=""> Female </option>
+                </select>
+             </div> 
+             <div class="input">
+                <label> Course </label>
+                <select type="text" required> 
+                  <option > select a course </option>
+                  <option value=""> Car Driving </option>
+                  <option value=""> Motor Cycles </option>
+                  <option value=""> Three Wheels </option>
+                  <option value=""> Lorry Driving </option>
+                  <option value=""> Motor Coach </option>
+                </select>
+             </div> 
+          </div>   
+
+        <input type="button" value="submit" class="submit" id="open">  
+        <input type="reset" value="reset" class="submit">
+
+          <dialog class="dialog">
+            <h2> Warning  </h2>
+            <p> You need to consider about this. If you made a mistake in this information, it will be bit harder to re submit as you need to contact us.</p>
+
+            <div class="links">
+               <a href="" id="close">  Check Again... </a>
+               <input type="submit" value="Register">
+            </div>
+
+          </dialog>
+
+        </form>    
+
+    </div>
+
+</section>
+
+<script>
+
+  const OpenDialog = document.querySelector('#open');
+  const CloseDialog = document.querySelector('#close');
+  const Dialog = document.querySelector('.dialog');
+
+  OpenDialog.addEventListener('click', () => {
+     Dialog.showModal();
+     Dialog.style.margin = "auto auto auto 30%";
+     document.style.background = "rgba(0,0,0,0.8) !important; "
+  });
+  CloseDialog.addEventListener('click', () => {
+     Dialog.closeModal();
+  });
+
+</script>
+
+</body>
+</html>

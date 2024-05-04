@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --button-color: #f5168d;
+}
+
+.header {
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-image: url(http://localhost/Driving_School/images/cars.jpg);
+    background-position: center;
+    padding: 10px 8%;
+    overflow-y: hidden;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.logo a {
+    font-size: 40px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+nav .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .buttons a {
+    color: #fff;
+    padding: 13px 20px;
+    font-weight: 500;
+    cursor: pointer;
+    background: #f5168d;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav ul li::after {
+      content: '';
+      width: 0%;
+      height: 4px;
+      background: #06dcb8;
+      display: block;
+      margin: 2px;
+      transition: 0.5s;
+}
+
+nav ul li:hover::after {
+    width: 100%;
+}
+
+#services .dropdown-1 {
+    display: none;
+}
+
+#services:hover .dropdown-1 {
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -100px;
+    width: 400px;
+}
+
+#services .dropdown-2 {
+    display: none !important;
+}
+
+#Driving:hover .dropdown-2 {
+    display: block !important;
+    margin-top: 10px !important;
+    margin-left: 100px !important;
+    width: 400px !important;
+}
+
+.header h1 {
+    font-size: 65px;
+    text-align: center;
+    margin-top: 150px;
+    color: #fff;
+    font-weight: bolder;
+}
+
+.registration {
+    background-color: rgb(12, 233, 233);
+    width: 100%;
+    height: 220vh;
+    justify-content: center;
+}
+
+.registration h1 {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 50px;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    position: relative;
+    width: 90%;
+    border-radius: 6px;
+    padding: 40px;
+    background-color: #fff;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+
+.registration form {
+    position: relative;
+}
+
+.registration form .inputs {
+    align-items: center;
+    display: flex;
+    justify-content: left;
+    padding-left: 20px;
+    flex-wrap: wrap;
+}
+
+.registration form .input {
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+form .inputs input, select {
+    flex-direction: column;
+    flex-basis: 30%;
+    display: flex;
+    height: 40px;
+    width: 450px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    font-size: 20px;
+    color: black;
+}
+
+form .inputs input ::placeholder, select ::placeholder {
+    font-size: 8px;
+}
+
+form .inputs .input label {
+    font-size: 18px;
+    padding-bottom: 100px !important;
+    font-weight: bold;
+    color: black;
+}
+
+form .inputs select {
+    background-color: #fff;
+}
+
+form button, form a {
+    padding: 15px 15px;
+    font-size: 20px;
+    background-color: #f5168d;
+    outline: 0;
+    border-radius: 5px;
+    border: 0;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-left: 68px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+form button:hover {
+     background-color: #1531e7;
+}
+
+.progress-bar {
+    position: relative;
+    display: flex;
+    gap: 440px;
+    justify-content: center;
+    margin-bottom: 50px;
+    counter-reset: step;
+}
+
+.progress-bar::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 8px;
+    background-color: #dcdcdc;
+    
+}
+
+.progress-step {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #dcdcdc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    z-index: 2;
+}
+
+.progress-step-active {
+    background-color: #1531e7;
+    color: #fff;
+}
+
+.progress-step::after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 10px);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.progress-step::before {
+    counter-increment: step;
+    content: counter(step);
+}
+
+div #form1 {
+    margin-bottom: 50px;
+}
+
+div #form2  {
+    margin-left: 67px;
+}
+
+div #form2 select {
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 500px;
+    font-size: 25px;
+    height: 50px;
+}
+
+div #form2 select option {
+    color: #000 !important;
+}
+
+div #form2 a, input[type="submit"] {
+    padding: 15px 15px;
+    font-size: 20px;
+    background-color: #f5168d;
+    outline: 0;
+    border-radius: 5px;
+    border: 0;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 80px;
+    margin-left: 2px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+div #form2 a:hover, input[type="submit"]:hover {
+    background-color: #1531e7;
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step-active {
+    display: block;
+}
+
+div #form2 h3 {
+    font-size: 30px;
+}
+
+div #form2 .input-group {
+    font-size: 25px;
+    font-weight: normal;
+    display: block;
+    margin-top: 40px;
+}
+
+div #form2 .input-group input {
+    width: 40px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+div #form3 label {
+        font-size: 25px;
+        margin-right: 40px;
+}
+
+div #form3 .input input {
+    width: 400px;
+    height: 50px;
+    border-radius: 25px;
+    outline: none;
+    border: 2px solid #000;
+    background-color: transparent;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
