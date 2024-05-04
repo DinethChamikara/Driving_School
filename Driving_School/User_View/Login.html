@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Login.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    
+     <div class="container">
+
+
+        <h1> Login And Registration Form </h1>
+
+              <div class="screen">
+                 <div class="inner-content" id="screen">
+                   <div class="sign-up">
+                    <h2> Sign Up </h2>
+                    <form action="http://localhost/Driving_School/Index.html">
+                        <input type="e-mail" placeholder="Enter your Driving School ID" class="user-input" required>
+                        <input type="text" placeholder="Enter your NIC Number" class="user-input" required>
+                        <input type="password" placeholder="Enter your password" class="user-input" id="passwd" required>
+                        <input type="password" placeholder="Confirm your password" class="user-input" id="passwd" required>
+                        <button type="button" class="submit" id="open"> Submit </button>
+
+                        <br><br>
+                        
+                    </form>
+                     
+
+                    <button id="login-button" style="font-size: 20px;" onclick="OpenLogin()"> I have an account </button>
+                    <a href="" style="text-align: center; margin-top: 40px;"> I Haven't registered to the system </a>
+                    
+                        
+                    </div>
+
+                    <div class="login">
+                        <h2> login </h2>
+                        <form action="http://localhost/Driving_School/Index.html">
+                            <input type="e-mail" placeholder="Enter your Driving School ID" class="user-input" required>
+                            <input type="password" placeholder="Enter your password" class="user-input" id="passwd" required>
+                            <button type="submit" class="submit" id="open"> Login </button>
+                            <input type="checkbox" style="margin-left: 70px;" id="check-box"><span> Remember Me </span> </input>
+                            <br>
+                        </form>
+
+                        <button id="New" onclick="OpenRegister()"> I'm New Here </button>
+
+                       <br><br><br> 
+                      <center><a href="" style="text-decoration: none; color: #fff; font-size: 20px; margin-top: 8px;">Forget Password</a></center>  
+                            
+                    </div>
+                     </div>
+              </div>
+          </div>
+
+          <dialog class="modal">
+
+            <div class="modal-header">
+              <h2> Password Length </h2>
+              <button> X </button>
+            </div>
+            <div class="modal-body">
+              <p>Your Password is a weak one. we would recomend you to insert a stronger password even with 10 characters. It will be helpful for you and us as it reduces security threats.</p>
+            </div>
+            <div class="modal-footer">
+              <button id="close"> Got It. </button>
+            </div>
+
+          </dialog>
+
+     <script>
+
+        function MyFunction() {
+              
+               let a = document.getElementById('passwd').value;
+
+               if (a.length < 10) {
+                       document.getElementById('text').innerHTML = "Password Must be longer than 10 characters.";
+
+               } else {
+                       document.getElementById('text').innerHTML = "Ok let's go";
+               }
+        }
+
+        var screen = document.getElementById('screen');
+
+        function OpenRegister() {
+            
+            screen.style.transform = "rotateY(-180deg)";
+        }
+
+        function OpenLogin() {
+            
+            screen.style.transform = "rotateY(0deg)";
+        }
+
+        const OpenDialog = document.querySelector('#open');
+        const CloseDialog = document.querySelector('#close');
+        const Dialog = document.querySelector('.modal');
+
+      
+        OpenDialog.addEventListener('click', () => {
+           Dialog.showModal();
+           document.style.background = "rgba(0,0,0,0.8) !important;";
+           
+        });
+        CloseDialog.addEventListener('click', () => {
+           Dialog.close();
+        });
+     </script>
+
+<footer>
+    <div class="container-2">
+       <div class="row">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae vel fugiat provident tenetur nihil commodi deleniti, ipsa odio cumque tempore itaque recusandae illo aspernatur minus error aliquid. Corporis, id dolorem? </p>
+
+        </div>
+         <div class="footer-col">
+           <h4>Company</h4>
+           <ul>
+             <li><a href="">Home</a></li>
+             <li><a href="">About Us</a></li>
+             <li><a href="">Contact Us</a></li>
+             <li><a href="">Services</a></li>
+           </ul>
+         </div>
+
+         <div class="footer-col">
+           <h4>Contact</h4>
+           <ul>
+             <li><a href=""><i></i> 0776665435</a></li>
+             <li><a href=""><i></i> driving@gmail.com</a></li>
+             <li><a href=""><i></i> 0869469586</a></li>
+             <li><a href=""><i></i> 475-D, Alubomulla, Panadura</a></li>
+           </ul>
+         </div>
+
+         <div class="footer-col">
+           <h4>Fullow us on</h4>
+           <div class="social-links">
+             <a href=""><i class="fab fa-facebook-f"></i></a>
+             <a href=""><i class="fab fa-twitter"></i></a>
+             <a href=""><i class="fab fa-instagram"></i></a>
+             <a href=""><i class="fab fa-linkedin-in"></i></a>
+           </div>
+         </div>
+       </div>
+    </div>
+ </footer>
+
+</body>
+</html>
